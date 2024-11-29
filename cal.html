@@ -1,0 +1,345 @@
+<!-- /*
+* Bootstrap 5
+* Template Name: Furni
+* Template Author: Untree.co
+* Template URI: https://untree.co/
+* License: https://creativecommons.org/licenses/by/3.0/
+*/ -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Untree.co">
+  <link rel="shortcut icon" href="favicon.png">
+
+  <meta name="description" content="" />
+  <meta name="keywords" content="bootstrap, bootstrap4" />
+
+		<!-- Bootstrap CSS -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+		<link href="css/tiny-slider.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+		<title>TaxEase.co</title>
+		<style>
+			h3 {
+				padding-top: 30px;
+				text-align: center; /* จัดกึ่งกลางข้อความ */
+				font-family: Arial, sans-serif; /* เปลี่ยนฟอนต์ของข้อความ */
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<!-- Start Header/Navigation -->
+		<nav class="custom-navbar navbar navbar-expand-md navbar-dark bg-dark fixed-top" arial-label="Furni navigation bar">
+
+			<div class="container">
+				<a class="navbar-brand" href="index.html">TaxEase<span>.</span></a>
+	
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni" aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+	
+					<div class="collapse navbar-collapse" id="navbarsFurni">
+						<ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
+							<li class="nav-item active">
+								<a class="nav-link" href="index.html">Home</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="index.html#product">Shop</a>
+								<div class="dropdown-content">
+								  <a href="shopbook.html">Book</a>
+								  <a href="shopservices.html">Services</a>
+								  <a href="shopprogram.html">Program</a>
+								</div>
+							  </li>
+							<li><a class="nav-link" href="index.html#about">About us</a></li>
+							<li><a class="nav-link" href="index.html#contact">Contact us</a></li>
+						</ul>
+		
+						<ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
+							<li>
+								<a class="nav-link" href="user.html"><img src="images/user.svg"></a>
+							</li>
+							<li>
+								<a class="nav-link" href="cart.html"><img src="images/cart.svg"></a>
+							</li>
+						</ul>
+					</div>
+			</div>
+	
+		</nav>
+		<!-- End Header/Navigation -->
+
+		<!-- Start Hero Section -->
+			<div class="hero">
+				<div class="container">
+					<div class="row justify-content-between">
+						<div class="col-lg-5">
+							<div class="intro-excerpt">
+								<h1>คำนวณภาษี</h1>
+								<p class="mb-4">ช่วยคำนวณภาษีเงินได้บุคคลธรรมดาประจำปี</p>
+							</div>
+						</div>
+						<div class="col-lg-7">
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		<!-- End Hero Section -->
+
+		
+
+	<div class="untree_co-section">
+		<div class="container">
+		<div class="block">
+		<div class="row justify-content-center">
+		<div class="col-md-8 col-lg-8 pb-4">
+			<form id="taxForm">
+				<h5>รายรับ</h5>
+				<div class="form-group">
+					<label for="salary">เงินเดือน (บาท)</label>
+					<input type="text" class="form-control" id="salary" placeholder="เงินเดือนของคุณเดือนละ">
+				</div>
+				<div class="form-group">
+					<label for="bonus">โบนัส (บาท)</label>
+					<input type="text" class="form-control" id="bonus" placeholder="ระบุโบนัสที่คุณได้รับในปี">
+				</div>
+				<div class="form-group">
+					<label for="other-income">รายได้อื่นๆ เช่น การขายของออนไลน์, รับจ้างฟรีแลนซ์ (บาท)</label>
+					<input type="text" class="form-control" id="other-income" placeholder="ระบุรายได้ทั้งปี">
+				</div>
+	
+				<h5>รายการลดหย่อนภาษี : ครอบครัว</h5>
+				<div class="form-group">
+					<label for="status">สถานะสมรส</label>
+					<select class="form-control" id="status">
+						<option>โสด</option>
+						<option>แต่งงาน</option>
+						<option>หม้าย</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label for="personal-deduction">ลดหย่อนส่วนบุคคล</label>
+					<input type="text" class="form-control" id="personal-deduction" value="60000" readonly>
+				</div>
+				<div class="form-group">
+					<label>ลดหย่อนบิดา-มารดา (ตนเอง)</label>
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" id="parent-basic">
+						<label class="form-check-label" for="parent-basic">บิดา</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" id="parent-mother">
+						<label class="form-check-label" for="parent-mother">มารดา</label>
+					</div>
+					<small class="form-text text-muted">คนละ 30,000 บาท (บิดามารดาต้องมีอายุเกิน 60 ปี และมีเงินได้ไม่เกิน 30,000 บาทต่อปี) (ได้ทั้งบิดา มารดาของตนเอง และคู่สมรส)</small>
+				</div>
+				<div class="form-group">
+					<label>ลดหย่อนผู้พิการหรือทุพพลภาพ (ไม่มีเงินได้)</label>
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" id="disabled-basic">
+						<label class="form-check-label" for="disabled-basic">บิดา</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" id="disabled-mother">
+						<label class="form-check-label" for="disabled-mother">มารดา</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" id="disabled-relative">
+						<label class="form-check-label" for="disabled-relative">ญาติ (เช่น พี่, น้อง ฯลฯ)</label>
+					</div>
+					<small class="form-text text-muted">
+						ครอบครัว, บิดา, มารดา, คู่สมรส, บุตรผู้สืบสันดาน, บุตรบุญธรรม, 
+						บุตรคู่สมรส และบุพการีของตนเอง หากเป็นผู้มีบัตรประจำตัวคนพิการ ลดหย่อนได้คนละ 60,000 บาท (ต้องมีบัตรประจำตัวคนพิการ และไม่มีรายได้)
+					</small>
+				</div>
+	
+				<h5>รายการลดหย่อนภาษี : กองทุน เงินประกันสังคม และที่อยู่อาศัย</h5>
+				<div class="form-group">
+					<label for="pvd">ค่าลดหย่อนกองทุนสำรองเลี้ยงชีพ (PVD)</label>
+					<input type="text" class="form-control" id="pvd" placeholder="ระบุจำนวนเงิน">
+					<small class="form-text text-muted">ไม่เกิน 15% ของเงินเดือน (ไม่รวมเงินสมทบจากนายจ้าง) และไม่เกิน 500,000 บาท</small>
+				</div>
+				<div class="form-group">
+					<label for="social-security">เงินประกันสังคม</label>
+					<input type="text" class="form-control" id="social-security" placeholder="ระบุจำนวนเงิน">
+					<small class="form-text text-muted">ไม่เกิน 9,000 บาท</small>
+				</div>
+				<div class="form-group">
+					<label for="mortgage-interest">ดอกเบี้ยซื้อที่อยู่อาศัย</label>
+					<input type="text" class="form-control" id="mortgage-interest" placeholder="ระบุจำนวนเงิน">
+					<small class="form-text text-muted">ไม่เกิน 100,000 บาท</small>
+				</div>
+	
+				<h5>รายการลดหย่อนภาษี : ประกัน</h5>
+				<div class="form-group">
+					<label for="life-insurance">เบี้ยประกันชีวิต</label>
+					<input type="text" class="form-control" id="life-insurance" placeholder="ระบุจำนวนเงิน">
+					<small class="form-text text-muted">ไม่เกิน 100,000 บาท</small>
+				</div>
+				<div class="form-group">
+					<label for="health-insurance">เบี้ยประกันสุขภาพ</label>
+					<input type="text" class="form-control" id="health-insurance" placeholder="ระบุจำนวนเงิน">
+					<small class="form-text text-muted">ไม่เกิน 25,000 บาท</small>
+					<small class="form-text text-muted">เบี้ยประกันชีวิต และประกันสุขภาพรวมกันต้องไม่เกิน 100,000 บาท</small>
+				</div>
+				<div class="form-group">
+					<label for="parent-health-insurance">เบี้ยประกันสุขภาพบิดา, มารดา</label>
+					<input type="text" class="form-control" id="parent-health-insurance" placeholder="ระบุจำนวนเงิน">
+					<small class="form-text text-muted">ไม่เกิน 15,000 บาท</small>
+				</div>
+				<div class="form-group">
+					<label for="pension-insurance">เบี้ยประกันชีวิตบำนาญ</label>
+					<input type="text" class="form-control" id="pension-insurance" placeholder="ระบุจำนวนเงิน">
+					<small class="form-text text-muted">
+						ไม่เกิน 15% ของรายได้ทั้งปี ไม่เกิน 200,000 บาท หากไม่ได้ใช้สิทธิประกันชีวิตทั่วไป สามารถนำมารวมได้สูงสุด 300,000 บาทและรวมกับกองทุนอื่นไม่เกิน 500,000 บาท
+					</small>
+				</div>
+	
+				<h5>รายการลดหย่อนภาษี : กองทุนอื่นๆ</h5>
+				<div class="form-group">
+					<label for="gov-pension-fund">กองทุนบำเหน็จบำนาญข้าราชการ (กบข.)</label>
+					<input type="text" class="form-control" id="gov-pension-fund" placeholder="ระบุจำนวนเงิน">
+					<small class="form-text text-muted">ไม่เกิน 15% ของรายได้ทั้งปี และรวมกับกองทุนอื่นไม่เกิน 500,000 บาท</small>
+				</div>
+				<div class="form-group">
+					<label for="national-savings-fund">กองทุนออมแห่งชาติ (กอช.)</label>
+					<input type="text" class="form-control" id="national-savings-fund" placeholder="ระบุจำนวนเงิน">
+					<small class="form-text text-muted">ไม่เกิน 13,200 บาท และรวมกับกองทุนอื่นและเบี้ยประกันชีวิตแบบบำนาญแล้วไม่เกิน 500,000 บาท</small>
+				</div>
+				<div class="form-group">
+					<label for="private-teacher-fund">กองทุนครูเอกชน</label>
+					<input type="text" class="form-control" id="private-teacher-fund" placeholder="ระบุจำนวนเงิน">
+					<small class="form-text text-muted">ไม่เกิน 15% ของรายได้ทั้งปี และรวมกับกองทุนอื่นและเบี้ยประกันชีวิตแบบบำนาญแล้วไม่เกิน 500,000 บาท</small>
+				</div>
+	
+				<button type="button" class="s" onclick="calculateTax()">Calculate</button>
+			</form>
+			<div id="result" class="mt-4"></div>
+		</div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+		 <!-- Start Footer Section -->
+		 <footer class="footer-section">
+			<div class="container relative">
+	
+				<div class="sofa-img">
+					<img src="images/sofa.png" alt="Image" class="img-fluid">
+				</div>
+	
+				<div class="row">
+					<div class="col-lg-8">
+						<div class="subscription-form">
+							<h3 class="d-flex align-items-center"><span class="me-1"><img src="images/envelope-outline.svg" alt="Image" class="img-fluid"></span><span>ติดต่อสอบถามเพื่อเติม</span></h3>
+	
+							<form action="#" class="row g-3">
+								<div class="col-auto">
+									<input type="text" class="form-control" placeholder="Enter your name">
+								</div>
+								<div class="col-auto">
+									<input type="email" class="form-control" placeholder="Enter your email">
+								</div>
+								<div class="col-auto">
+									<button class="btn btn-primary">
+											<span class="fa fa-paper-plane"></span>
+										</button>
+								</div>
+							</form>
+	
+						</div>
+					</div>
+				</div>
+	
+	
+				<div class="border-top copyright">
+					<div class="row pt-4">
+						<div class="col-lg-6">
+							<p class="mb-2 text-center text-lg-start">Copyright &copy;
+								<script>
+									document.write(new Date().getFullYear());
+								</script>. All Rights Reserved. &mdash; Designed with love by <a href="https://untree.co">Untree.co</a> Distributed By <a hreff="https://themewagon.com">ThemeWagon</a>
+								<!-- License information: https://untree.co/license/ -->
+							</p>
+						</div>
+	
+						<div class="col-lg-6 text-center text-lg-end">
+							<ul class="list-unstyled d-inline-flex ms-auto">
+								<li class="me-4"><a href="#">Terms &amp; Conditions</a></li>
+								<li><a href="#">Privacy Policy</a></li>
+							</ul>
+						</div>
+	
+					</div>
+				</div>
+	
+			</div>
+		</footer>
+		<!-- End Footer Section -->
+
+		<script>
+			function calculateTax() {
+				const salary = parseFloat(document.getElementById('salary').value) || 0;
+				const bonus = parseFloat(document.getElementById('bonus').value) || 0;
+				const otherIncome = parseFloat(document.getElementById('other-income').value) || 0;
+				const totalIncome = (salary * 12) + bonus + otherIncome;
+	
+				let expenseDeduction = 0;
+				// ตรวจสอบว่ารายได้มาจากเงินเดือนเพียงอย่างเดียวหรือไม่
+				if (bonus === 0 && otherIncome === 0) {
+					// หักค่าใช้จ่าย 50% แต่ไม่เกิน 100,000 บาท
+					expenseDeduction = Math.min(totalIncome * 0.5, 100000);
+				}
+				// ค่าลดหย่อนส่วนตัว 60,000 บาท
+				const personalDeduction = 60000;
+	
+				const totalDeductions = expenseDeduction + personalDeduction;
+				const taxableIncome = totalIncome - totalDeductions;
+	
+				// คำนวณภาษีแบบขั้นบันได
+				const taxAmount = calculateProgressiveTax(taxableIncome);
+	
+				const resultElement = document.getElementById('result');
+				resultElement.innerHTML = `<h3>ผลการคำนวณ</h3>
+										   <h5>รายได้รวม: ${totalIncome.toLocaleString()} บาท</h5>
+										   <h5>ลดหย่อนภาษีรวม: ${totalDeductions.toLocaleString()} บาท</h5>
+										   <h5>รายได้สุทธิ: ${taxableIncome.toLocaleString()} บาท</h5>
+										   <h5>ภาษีที่ต้องจ่าย: ${taxAmount.toLocaleString()} บาท</h5>`;
+			}
+	
+			// ฟังก์ชันสำหรับคำนวณภาษีแบบขั้นบันได
+			function calculateProgressiveTax(income) {
+				if (income <= 150000) {
+					return 0;
+				} else if (income <= 300000) {
+					return (income - 150000) * 0.05;
+				} else if (income <= 500000) {
+					return (income - 300000) * 0.1 + 7500;
+				} else if (income <= 750000) {
+					return (income - 500000) * 0.15 + 27500;
+				} else if (income <= 1000000) {
+					return (income - 750000) * 0.2 + 65000;
+				} else if (income <= 2000000) {
+					return (income - 1000000) * 0.25 + 115000;
+				} else if (income <= 5000000) {
+					return (income - 2000000) * 0.3 + 365000;
+				} else {
+					return (income - 5000000) * 0.35 + 1265000;
+				}
+			}
+		</script>
+
+		<script src="js/bootstrap.bundle.min.js"></script>
+		<script src="js/tiny-slider.js"></script>
+		<script src="js/custom.js"></script>
+	</body>
+
+</html>
